@@ -1,0 +1,517 @@
+ /* Google Fonts - Poppins */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+ :root {
+  --gold: #f9bf51;
+  --orange: #fe7e37;
+  --white: whitesmoke;
+  --greenblue: #008f8d;
+  --blue: #16213e;
+}
+
+html, body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+body {
+  padding: 0 40px;
+  background-color: var(--blue);
+}
+
+/*-------SECTION INFO--------------------------------------------------------*/
+
+.info{
+  border-bottom: 2px solid var(--gold);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+.info img {
+  height: 50px;
+  width: auto;
+}
+
+.info a {
+  color: white;
+  text-decoration: none;
+}
+
+.info a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+/*-------END SECTION INFO----------------------------------------------------------*/
+
+/*-------SECTION CHANGE BACKGROUND THEME && BACK HOME----------------------------------------------------------*/
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.theme{
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5px 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  color: var(--white);
+  border: 2px solid var(--gold);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.back-home {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5px 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  color: var(--white);
+  border: 2px solid var(--gold);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.back-home a:link {
+  text-decoration: none;
+  color: var(--white);
+}
+.back-home a:visited {
+  text-decoration: none;
+  color: var(--white);
+}
+
+
+
+
+/*-------END SECTION CHANGE BACKGROUND THEME && BACK HOME----------------------------------------------------------*/
+
+/*-------SECTION TITLE----------------------------------------------------------*/
+
+ .text-focus-in{
+    text-align: center;
+    color: var(--white);
+        -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+ }
+
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+/*-------END SECTION TITLE----------------------------------------------------------*/
+
+/*-------SECTION MENU----------------------------------------------------------*/
+
+ul{
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid var(--gold) ;
+}
+
+li{
+    list-style-type: none;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.70s;
+}
+
+li:hover {
+    text-decoration: underline;
+    color: var(--blue);
+    transform: scale(1.1);
+}
+
+li a:link{
+  color: var(--white);
+  text-decoration: none;
+}
+
+li a:visited{
+  color: var(--white);
+  text-decoration: none;
+}
+
+/*-------END SECTION MENU----------------------------------------------------------*/
+
+/*-------SECTION HERO----------------------------------------------------------*/
+
+.hero img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*-------END SECTION HERO----------------------------------------------------------*/
+
+/*-------SECTION ALL USERS----------------------------------------------------------*/
+
+.users {
+  padding: 10px 10px;
+  text-align: center;
+  color: var(--white);
+  border-bottom: 2px solid var(--gold) ;
+}
+
+
+/*gallery*/
+.card-content {
+  padding: 30px 10px;
+	display: grid;
+	grid-template-columns: repeat(10, 20vw);
+	grid-template-rows: 1fr;
+
+	overflow-x: scroll;
+
+	scroll-snap-type: both mandatory;
+	scroll-padding: 1rem;
+  
+}
+
+.active {
+	scroll-snap-type: unset;
+}
+
+.card-content-over-50 {
+  border-radius: 5px;
+  padding: 30px 10px;
+
+  display: grid;
+  grid-template-columns: repeat(10, 20vw);
+  grid-template-rows: 1fr;
+
+  overflow-x: scroll;
+
+  scroll-snap-type: both mandatory;
+  scroll-padding: 1rem;
+}
+  
+
+/* singola card */
+.card-el{
+  border: 2px solid var(--gold); 
+  border-radius: 25px;
+  background-color: rgba(245, 245, 245, 0.245);
+  color: var(--white);
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  scroll-snap-align: center;
+
+  transition: 0.80s;
+
+}
+
+.card-el:hover{
+  background-color: var(--gold) ;
+  color: var(--blue);
+}
+
+.card-el:hover p {
+  color: var(--white);
+}
+
+.card-el:hover img {
+  border: 3px solid var(--blue);
+}
+
+.user-image{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: var(--gold); 
+}
+
+/*-------END SECTION ALL USERS----------------------------------------------------------*/
+
+/* -------no style scrollbar-------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+} 
+
+::-webkit-scrollbar {
+  width: 0;
+} 
+
+::-webkit-scrollbar-track {
+  background: transparent;
+} 
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+*{
+  -ms-overflow-style: none;
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+
+/* Title OUR VALUES && ABOUT US */
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  border-bottom: 2px solid var(--gold);
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*-------SECTION CAROUSEL OUR VALUES-----------------------------------------------------------*/
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.slide-container {
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container > div {
+  /* position: absolute; */
+  background-color: rgba(245, 245, 245, 0.322);
+  color: whitesmoke;
+  border-radius: 50px;
+  padding: 5px 5px;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+} 
+
+.slide-container > div img {
+  width: 200px;
+  height: auto;
+}
+
+
+div:nth-child(2) {
+  animation-delay: 2s;
+}
+div:nth-child(3) {
+  animation-delay: 4s;
+}
+div:nth-child(4) {
+  animation-delay: 6s;
+}
+div:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/*-------END SECTION CAROUSEL OUR VALUES-----------------------------------------------------------*/
+
+/*-------SECTION ABOUT US-----------------------------------------------------------*/
+
+.about-container {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-container img {
+  max-width: 70%;
+  height: auto;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container p a{
+  color: whitesmoke;
+  text-decoration: none;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.about-container p a:hover{
+  color: var(--gold);
+  text-decoration: underline;
+  border: 2px solid var(--gold);
+}
+
+/*-------END SECTION ABOUT US-----------------------------------------------------------*/
+
+/*-------SECTION FOLLOW US----------------------------------------------------------*/
+
+#contact {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.media-icons {
+  background-color: whitesmoke;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+p {
+  text-align: center;
+  color: whitesmoke;
+}
+
+/*-------END SECTION FOLLOW US----------------------------------------------------------*/
+
+/*-------BTN BACK TO TOP-------------------------------------------------------*/
+
+#tornasu{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  display: none;
+  padding:10px;
+
+  }
+
+#tornasu img{
+  border-radius: 50%;
+}
+
+/*------------------------------------------------------------------------------*/
+
+/*RESPONSIVE DESIGN*/
+
+/*Phone*/
+@media screen and (max-width:767px){
+
+    .info{
+      gap: 20px;
+    }
+
+    /*gallery*/
+    .card-content {
+      grid-template-columns: repeat(10, 60vw);
+    }
+
+    .card-content-over-50 {
+      grid-template-columns: repeat(10, 60vw);
+    }
+
+}
+
+/* small screem phone */
+@media screen and (min-width:300px) and (max-width: 340px) {
+
+      .info{
+        gap: 20px;
+      }
+      /*gallery*/
+      .card-content {
+        grid-template-columns: repeat(10, 80vw);        
+      }
+  
+      .card-content-over-50 {
+        grid-template-columns: repeat(10, 80vw);
+      }
+
+}
+
+/*Tablet*/
+@media screen and (min-width:767px) and (max-width:1050px){
+
+      .info{
+        gap: 20px;
+      }
+
+      /*gallery*/
+      .card-content {
+        grid-template-columns: repeat(10, 40vw);
+      }
+  
+      .card-content-over-50 {
+        grid-template-columns: repeat(10, 40vw);
+      }
+}
+
+/*Big screen tablet*/
+@media screen and (min-width:1050px) and (max-width: 1320px){
+     
+      .info{
+        gap: 20px;
+      }
+
+       /*gallery*/
+      .card-content {
+        grid-template-columns: repeat(10, 30vw);
+      }
+
+      .card-content-over-50 {
+        grid-template-columns: repeat(10, 30vw);
+  }
+}
